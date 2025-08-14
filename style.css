@@ -1,0 +1,302 @@
+/* CSS стилізація */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00A8FF;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00A8FF;
+}
+
+/* Main */
+main {
+    margin-top: 80px;
+}
+
+section {
+    padding: 60px 0;
+    min-height: 40vh;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00A8FF;
+    font-weight: 300;
+}
+
+/* About Section */
+#about {
+    background-color: #000000;
+    background-image: url('https://i.postimg.cc/WzB3rrF2/Image-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+}
+
+#about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #E0E0E0;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #121212;
+    padding: 100px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.portfolio-card {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 168, 255, 0.2);
+    border-color: #00A8FF;
+}
+
+.portfolio-card iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    aspect-ratio: 16 / 9;
+}
+
+.card-title {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #00A8FF;
+}
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-list li {
+    background-color: #333;
+    padding: 15px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+    display: inline-block;
+}
+
+.contact-list li:hover {
+    background-color: #00A8FF;
+    transform: translateY(-3px);
+    min-width: auto;
+    width: auto;
+}
+
+.contact-list a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.contact-list li .contact-info {
+    display: none;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.contact-list li .contact-label {
+    transition: opacity 0.3s ease;
+}
+
+.contact-list li:hover .contact-label {
+    display: none;
+}
+
+.contact-list li:hover .contact-info {
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .contact-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-card {
+    animation: fadeIn 0.6s ease-out;
+}
