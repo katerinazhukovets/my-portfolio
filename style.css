@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #0B0F14;
-    background-image: url('bg_gradient_1920x1080.jpg'); 
+    background-image: url('bg_gradient_1920x1080.png'); 
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -347,4 +347,5 @@ footer p {
 #about p {
     color: #BCC0C4; 
 }
+
 
