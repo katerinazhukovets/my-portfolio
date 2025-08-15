@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #0B0F14;
-    background-image: url('bg_gradient_1920x1080.png');
+    background-image: url('bg_gradient_1920x1080.jpg'); /* Виправлено розширення */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -92,7 +92,7 @@ h2 {
 /* About Section */
 #about {
     background-color: rgba(11, 15, 20, 0.7);
-    background-image: url('Image_bg.png');
+    background-image: url('Image_bg.jpg'); /* Виправлено розширення */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,7 +108,8 @@ h2 {
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, transparent, rgba(11, 15, 20, 0));
+    /* ВИПРАВЛЕНО: градієнт тепер переходить до насиченого кольору */
+    background: linear-gradient(to bottom, transparent, rgba(11, 15, 20, 1));
     pointer-events: none;
 }
 
@@ -335,4 +336,14 @@ footer p {
 
 .portfolio-card {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* ДОДАНО: Нові стилі для тексту в секції "Про мене" */
+#about h2 {
+    color: #FFFFFF; /* Робить заголовок білим */
+    font-weight: 700; /* Робить заголовок жирним */
+}
+
+#about p {
+    color: #BCC0C4; /* Робить текст абзацу світло-сірим */
 }
